@@ -128,15 +128,3 @@ Dette emne er velegnet til IT-sikkerhed, da det berører:
 | Cycle Process Test | System Test      |
 | Testpyramiden      | Alle gates       |
 | Decision Table     | System Test      |
-
----
-
-## Moodle
-
-✔ Alle opgaver kan krydses af i Moodle
-✔ Alle eksempler er dokumenteret i denne README.md
-
----
-
-**Fag:** IT-sikkerhed
-**Formål:** Demonstrere testteknikker anvendt på et sikkerhedskritisk system
