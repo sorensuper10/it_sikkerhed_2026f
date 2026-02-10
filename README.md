@@ -149,3 +149,23 @@ Unit test
 Risici/Given/When/Then
 <img width="1198" height="605" alt="image" src="https://github.com/user-attachments/assets/c721963f-9a12-4542-801a-6c942af56f1c" />
 
+## Kryptering, Hashing og Datahåndtering
+
+### Valg af algoritmer
+Vi havde valget mellem flere krypteringsalgoritmer som AES, ChaCha20 og Fernet til personfølsomme data. Vi valgte **Fernet** fra `cryptography`-biblioteket, fordi den både tilbyder kryptering og integritetskontrol (signatur), hvilket gør data sikre og nemme at håndtere.  
+Til passwords havde vi valget mellem SHA-256, PBKDF2 og bcrypt. Vi valgte **bcrypt**, da den automatisk anvender salt og er designet til sikker password-håndtering, hvilket beskytter mod brute-force-angreb.
+
+### Kryptering af data
+Personfølsomme data (`first_name`, `last_name`, `address`, `street_number`) krypteres **inden de gemmes på disk**. Passwords hash’es med bcrypt. Dette sikrer, at ingen følsomme oplysninger ligger i klartekst i filsystemet, hvilket opfylder GDPR-krav.
+
+### Dekryptering af data
+Data dekrypteres **kun når filen indlæses i hukommelsen**, fx ved opstart af serveren, for at kunne manipulere eller vise oplysninger i applikationen. Passwords dekrypteres aldrig, da sammenligning sker via hash-verifikation.
+
+### Fjernelse af dekrypteret data
+Dekrypterede data bør fjernes fra hukommelsen **så snart de ikke længere er nødvendige**, fx efter en bruger-session eller når data er sendt til frontend. Dette reducerer risikoen for utilsigtet læk af følsomme oplysninger.
+
+### Yderligere hensyn
+- Krypteringsnøglen (`ENCRYPTION_KEY`) bør opbevares som miljøvariabel og ikke hardcodes.  
+- Filrettigheder bør sikre, at kun applikationen kan læse og skrive JSON-filen.  
+- Midlertidige nøgler må kun anvendes til test og aldrig i produktion.  
+- Data valideres ved dekryptering for at sikre integritet og forhindre fejl.
