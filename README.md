@@ -128,3 +128,17 @@ Dette emne er velegnet til IT-sikkerhed, da det berører:
 | Cycle Process Test | System Test      |
 | Testpyramiden      | Alle gates       |
 | Decision Table     | System Test      |
+
+10/02/2026
+
+## Hvorfor bruge en Flat-File Database?
+
+En flat-file database (JSON-baseret i dette projekt) er smart fordi:
+
+- **Simpel at implementere**: Ingen SQL-server eller ekstern database kræves.
+- **Portabel**: Hele databasen ligger i én fil, som kan flyttes mellem computere eller projekter.
+- **Let at læse og debugge**: JSON-filen kan åbnes og læses direkte, hvilket gør det nemt at se, hvad der ligger i databasen.
+- **Perfekt til små projekter**: Når antallet af brugere/data er begrænset, er flat-file databaser hurtige og overskuelige.
+- **Integration med tests**: Da filen er enkel at manipulere, kan vi hurtigt lave unit tests og datadrevne tests uden at konfigurere komplekse systemer.
+
+> Bemærk: Flat-file databaser egner sig ikke til store applikationer med millioner af rækker eller høje krav til samtidig adgang.
