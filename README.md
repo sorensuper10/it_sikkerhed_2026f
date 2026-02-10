@@ -142,3 +142,10 @@ En flat-file database (JSON-baseret i dette projekt) er smart fordi:
 - **Integration med tests**: Da filen er enkel at manipulere, kan vi hurtigt lave unit tests og datadrevne tests uden at konfigurere komplekse systemer.
 
 > Bemærk: Flat-file databaser egner sig ikke til store applikationer med millioner af rækker eller høje krav til samtidig adgang.
+
+Unit test
+<img width="1444" height="521" alt="image" src="https://github.com/user-attachments/assets/f59076f9-a86a-47a3-b8a1-520912a40829" />
+
+Risici/Given/When/Then
+<img width="1198" height="605" alt="image" src="https://github.com/user-attachments/assets/c721963f-9a12-4542-801a-6c942af56f1c" />
+
