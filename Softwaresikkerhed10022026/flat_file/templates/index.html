@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Brugerdatabase</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        h1 { color: #333; }
+        form { margin-bottom: 30px; padding: 20px; border: 1px solid #ccc; border-radius: 8px; width: 400px; }
+        label { display: block; margin-top: 10px; }
+        input[type="text"], input[type="number"], input[type="password"] {
+            width: 100%; padding: 6px; margin-top: 4px; box-sizing: border-box;
+        }
+        input[type="checkbox"] { margin-top: 10px; }
+        button { margin-top: 15px; padding: 8px 16px; cursor: pointer; }
+        .user-info { margin-top: 20px; padding: 10px; border: 1px solid #ddd; border-radius: 6px; width: 400px; background: #f9f9f9;}
+        .success { color: green; }
+        .error { color: red; }
+        table { border-collapse: collapse; width: 600px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #eee; }
+    </style>
+</head>
+<body>
+    <h1>Brugerdatabase</h1>
+
+    {% if message %}
+    <p class="success">{{ message }}</p>
+    {% endif %}
+
+    <!-- Formular til at oprette en bruger -->
+    <form method="post" action="/person">
+        <h2>Opret ny bruger</h2>
+        <label>Person ID:</label>
+        <input type="number" name="person_id" required>
+        <label>First Name:</label>
+        <input type="text" name="first_name" required>
+        <label>Last Name:</label>
+        <input type="text" name="last_name" required>
+        <label>Address:</label>
+        <input type="text" name="address" required>
+        <label>Street Number:</label>
+        <input type="text" name="street_number" required>
+        <label>Password:</label>
+        <input type="password" name="password" required>
+        <label>Enabled:</label>
+        <input type="checkbox" name="enabled" value="true">
+        <button type="submit">Gem bruger</button>
+    </form>
+
+    <!-- Formular til at hente en bruger -->
+    <form method="get" action="/get_person">
+        <h2>Hent bruger</h2>
+        <label>Person ID:</label>
+        <input type="number" name="person_id" required>
+        <button type="submit">Hent bruger</button>
+    </form>
+
+    {% if person %}
+    <div class="user-info">
+        <h3>Brugerinformation</h3>
+        <p><strong>Person ID:</strong> {{ person.person_id }}</p>
+        <p><strong>First Name:</strong> {{ person.first_name }}</p>
+        <p><strong>Last Name:</strong> {{ person.last_name }}</p>
+        <p><strong>Address:</strong> {{ person.address }}</p>
+        <p><strong>Street Number:</strong> {{ person.street_number }}</p>
+        <p><strong>Enabled:</strong> {{ person.enabled }}</p>
+    </div>
+    {% endif %}
+
+    {% if users %}
+    <h2>Alle brugere</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Fornavn</th>
+            <th>Efternavn</th>
+            <th>Adresse</th>
+            <th>Nr.</th>
+            <th>Enabled</th>
+        </tr>
+        {% for u in users %}
+        <tr>
+            <td>{{ u.person_id }}</td>
+            <td>{{ u.first_name }}</td>
+            <td>{{ u.last_name }}</td>
+            <td>{{ u.address }}</td>
+            <td>{{ u.street_number }}</td>
+            <td>{{ u.enabled }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+</body>
+</html>
