@@ -21,3 +21,7 @@ class UpdateUserRequest(BaseModel):
     first_name: str
     last_name: str
     roles: List[Role]
+
+class ChangePasswordRequest(BaseModel):
+    username: str
+    new_password: str

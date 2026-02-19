@@ -200,3 +200,29 @@ class User_service:
         user.roles = roles
 
         self._save_database()
+
+    def change_password(self, token: str, username: str, new_password: str):
+        """
+        Ændrer password for en bruger.
+        - Brugeren selv kan ændre sit eget password.
+        - Admin kan ændre alle brugeres password.
+        """
+        payload = Auth_service.verify_token(token)
+        requesting_user = payload["sub"]
+
+        # Tjek at brugeren findes
+        user = self._user_db.get(username)
+        if not user:
+            raise HTTPException(status_code=404, detail="User not found")
+
+        # Tillad ændring hvis admin eller det er ens egen konto
+        is_admin = self._user_has_at_least_one_role_for_access(requesting_user, [Role.admin])
+        is_self = requesting_user == username
+
+        if not (is_admin or is_self):
+            raise HTTPException(status_code=403, detail="User doesn't have privileges to change this password")
+
+        # Hash og opdater password
+        user.password = Auth_service.hash_password(new_password)
+        self._save_database()
+        return {"detail": f"Password for '{username}' has been updated"}

@@ -12,7 +12,8 @@ from Softwaresikkerhed19022026.auth_rest_api_models import (
     RegisterUserRequest,
     GetBearerTokenRequest,
     ActivateUserRequest,
-    UpdateUserRequest
+    UpdateUserRequest,
+    ChangePasswordRequest
 )
 
 class Auth_rest_api:
@@ -31,6 +32,21 @@ class Auth_rest_api:
         self.app.put("/users/{username}")(self.update_user)
         self.app.delete("/users/{username}")(self.delete_user)
         self.app.get("/users")(self.list_users)
+        self.app.post("/change_password")(self.change_password)
+
+    def change_password(
+            self,
+            post_variables: ChangePasswordRequest,
+            token: str = Header(...)
+    ):
+        if not token.startswith("Bearer "):
+            raise HTTPException(status_code=401, detail="Invalid or missing Authorization header")
+
+        return self.user_service.change_password(
+            token=token,
+            username=post_variables.username,
+            new_password=post_variables.new_password
+        )
 
     def get_user(self, username: str, token: str = Header(...)):
 
