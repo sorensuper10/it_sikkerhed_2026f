@@ -1,0 +1,22 @@
+{
+  "admin": {
+    "username": "admin",
+    "password": "vtytvvti+LQHVSugiqs7eIbNzHzNdVs0kT9xiNkgilpfizv6tAJSiproxvLJjzKS",
+    "first_name": "gAAAAABplu9WfCZnesxGmKX2veeMgTSTKWtbMRgPCZ82lN0WIXvumO2W3Tq_iJR9dAUoUF7SvxP6KhlgZcFB7e4ukEofdKLgQOBNy3lC9lbHab-_JE6CP7o=",
+    "last_name": "gAAAAABplu9WjnB5-7qODneCm3WSaZ4cHXImuFFEc4_gDIFpi8-Zej4bs_mNm2Av81vs3fye9N9zh7KkhZ1fzUhnPVi8s2kNWw==",
+    "active": true,
+    "roles": [
+      "admin"
+    ]
+  },
+  "bent@.dk": {
+    "username": "bent@.dk",
+    "password": "Rms67YhPbxkfKHVy8ANYLiPZ+IGSiy+zvn+ROXIQK8qJhvJVyoqEmQDTeMRrhyIv",
+    "first_name": "gAAAAABplvAsv_VS7DQTES6sT4hiXA7r9svxQNa_-z_Q5jtM8h8xlvCM5z20syN1po8PImlY0HTKtznFaF33sWCuVaqa9eBQVQ==",
+    "last_name": "gAAAAABplvAsbi7jYdUBUbYVmn1x53JFdEi5HaQRFP8s1i3QLSgxEdxBmBkl5Jy9xChO_xV2_2EL9lyJ7lKnFFnMZ201vc83HA==",
+    "active": true,
+    "roles": [
+      "user"
+    ]
+  }
+}

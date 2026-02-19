@@ -1,0 +1,12 @@
+{
+  "admin": {
+    "username": "admin",
+    "password": "uH+9zcusg/vIiUGuB80Dz0EW8dG/BR1xG4LgQ12SjP1hBz1ukqBixEmmXsmcP9oY",
+    "first_name": "gAAAAABpltrK2CZ_FGvxmc3lC3LDeHC_RKL4ZaGfq0nHnnVQvjQjVqv31_C4LShUoACHyzzCpm5iOGUOX9NVQtKBO7_MUFiuxKvXydSlU8UZNf6pi4jp6VA=",
+    "last_name": "gAAAAABpltrK-ei5L8cQc8H1edQsxHAAjRTWvwggVkd223BS39a8PMCvpavm8byg7ZxD_4kzzAbBJVjdDbCEkH8dDcC5xvH3uA==",
+    "active": true,
+    "roles": [
+      "admin"
+    ]
+  }
+}
