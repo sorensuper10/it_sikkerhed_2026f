@@ -169,3 +169,25 @@ Dekrypterede data bør fjernes fra hukommelsen **så snart de ikke længere er n
 - Filrettigheder bør sikre, at kun applikationen kan læse og skrive JSON-filen.  
 - Midlertidige nøgler må kun anvendes til test og aldrig i produktion.  
 - Data valideres ved dekryptering for at sikre integritet og forhindre fejl.
+
+19/02/2026
+<img width="1920" height="1004" alt="image" src="https://github.com/user-attachments/assets/c8c7ee3c-abed-4eab-a2b8-0932a550dec3" />
+
+26/02/2026 – Test Design Teknik
+
+Til at teste **Notes-service** og **Auth-service** har jeg anvendt **Positive/Negative Testing**:
+
+- **Positive tests**: Bekræfter, at systemet fungerer korrekt, når gyldige inputs og tokens anvendes.  
+  *Eksempel:* Opret og hent en note med et gyldigt token.
+
+- **Negative tests**: Bekræfter, at systemet håndterer ugyldige inputs korrekt.  
+  *Eksempel:* Forsøg på at hente noter med et ugyldigt token returnerer en `401 Unauthorized`.
+
+Denne tilgang sikrer, at vores microservices både fungerer som forventet og håndterer fejl korrekt.
+
+### Swagger
+<img width="1920" height="783" alt="image" src="https://github.com/user-attachments/assets/a9d5fd24-c0dc-4c55-a342-51555636822b" />
+
+### Test
+<img width="1920" height="1029" alt="image" src="https://github.com/user-attachments/assets/1400603d-6c1a-44c3-8e2d-5397b44928ea" />
+
