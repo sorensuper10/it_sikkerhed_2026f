@@ -169,3 +169,6 @@ Dekrypterede data bør fjernes fra hukommelsen **så snart de ikke længere er n
 - Filrettigheder bør sikre, at kun applikationen kan læse og skrive JSON-filen.  
 - Midlertidige nøgler må kun anvendes til test og aldrig i produktion.  
 - Data valideres ved dekryptering for at sikre integritet og forhindre fejl.
+
+19/02/2026
+<img width="1920" height="1004" alt="image" src="https://github.com/user-attachments/assets/c8c7ee3c-abed-4eab-a2b8-0932a550dec3" />
