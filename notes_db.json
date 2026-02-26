@@ -30,5 +30,13 @@
     {
         "id": 8,
         "text": "Dette er note 4"
+    },
+    {
+        "id": 9,
+        "text": "Test note"
+    },
+    {
+        "id": 10,
+        "text": "Det virker stadig"
     }
 ]
