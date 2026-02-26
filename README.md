@@ -174,7 +174,9 @@ Dekrypterede data bør fjernes fra hukommelsen **så snart de ikke længere er n
 <img width="1920" height="1004" alt="image" src="https://github.com/user-attachments/assets/c8c7ee3c-abed-4eab-a2b8-0932a550dec3" />
 
 26/02/2026
+
 Test Design Teknik
+
 Til at teste Notes-service og Auth-service har jeg anvendt Positive/Negative Testing:
 Positive tests: Bekræfter, at systemet fungerer korrekt, når gyldige inputs og tokens anvendes. Eksempel: Opret og hent en note med et gyldigt token.
 Negative tests: Bekræfter, at systemet håndterer ugyldige inputs korrekt. Eksempel: Forsøg på at hente noter med et ugyldigt token returnerer en 401 Unauthorized.
