@@ -186,7 +186,7 @@ Til at teste **Notes-service** og **Auth-service** har jeg anvendt **Positive/Ne
 Denne tilgang sikrer, at vores microservices både fungerer som forventet og håndterer fejl korrekt.
 
 ### Swagger
-<img width="1920" height="1029" alt="image" src="https://github.com/user-attachments/assets/1fab3e4f-5099-4358-9e02-78a9be62ba5c" />
+<img width="1920" height="783" alt="image" src="https://github.com/user-attachments/assets/a9d5fd24-c0dc-4c55-a342-51555636822b" />
 
 ### Test
 <img width="1920" height="1029" alt="image" src="https://github.com/user-attachments/assets/1400603d-6c1a-44c3-8e2d-5397b44928ea" />
