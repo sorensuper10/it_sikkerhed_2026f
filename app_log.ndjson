@@ -1,0 +1,3 @@
+{"asctime": "2026-04-21 12:42:31,086", "levelname": "INFO", "name": "Softwaresikkerhed21042026.logger", "message": "Applikationen starter"}
+{"asctime": "2026-04-21 12:42:31,086", "levelname": "ERROR", "name": "Softwaresikkerhed21042026.logger", "message": "Advarsel", "http_error_code": 400}
+{"asctime": "2026-04-21 12:42:31,087", "levelname": "ERROR", "name": "Softwaresikkerhed21042026.logger", "message": "Noget gik galt", "http_error_code": 500}
